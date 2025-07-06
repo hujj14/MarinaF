@@ -572,12 +572,182 @@
         font-size: 14px;
     }
 }
+.contact {
+    padding: 60px 20px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.contact-info i {
+    width: 25px;
+    color: #ff6b6b;
+    margin-right: 10px;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #ff6b6b;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-button i {
+    margin-right: 8px;
+    color: white;
+}
+
+.social-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .contact-info li {
+        font-size: 16px;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+    }
+    
+    .social-button {
+        justify-content: center;
+    }
+}
+.telegram {
+    background: linear-gradient(45deg, 
+        #0088cc 0%, 
+        #00aced 25%, 
+        #2e96ff 50%, 
+        #0088cc 75%, 
+        #00aced 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 4s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.certificates {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.certificates-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.certificate-item {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-10px);
+}
+
+.certificate-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.certificate-info {
+    padding: 20px;
+}
+
+.certificate-info h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.certificate-info p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .certificates-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .certificate-item img {
+        height: 200px;
+    }
+}
     </style>
 </head>
 <body>
     <!-- Шапка -->
     <header>
-        <a href="#" class="logo">Marina <span></span></a>
+        <a href="#" class="logo">Marina <span> Romanova</span></a>
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
@@ -614,7 +784,36 @@
             <p>Со мной легко и комфортно. Помогу с идеями и образом, локацией, а также с позированием. 
 Больше всего люблю портреты, а также работать с детьми</p>
         </div>
+        <!-- Заслуги-->
     </section>
+    <section class="certificates" id="certificates">
+    <h2 class="section-title">Мои дипломы и заслуги</h2>
+    <div class="certificates-container">
+        <div class="certificate-item">
+            <img src="https://getfile.dokpub.com/ru/i/voOzrLaZuzsDsA">
+            <div class="certificate-info">
+                <h3>Диплом профессионального фотографа</h3>
+                <p></p>
+            </div>
+        </div>
+        
+        <div class="certificate-item">
+            <img src="images/diploma2.jpg" alt="Сертификат по свету в фотографии">
+            <div class="certificate-info">
+                <h3>Сертификат по работе со светом</h3>
+                <p>Мастер-класс от известного fashion-фотографа Джеймса Родригеса, 2020 год. Углубленное изучение работы со студийным светом.</p>
+            </div>
+        </div>
+        
+        <div class="certificate-item">
+            <img src="images/diploma3.jpg" alt="Награда за лучшую фэшн-съемку">
+            <div class="certificate-info">
+                <h3>Награда "Лучшая фэшн-съемка"</h3>
+                <p>Премия Russian Fashion Photography Awards 2022 за серию работ для бренда "Elegance".</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Галерея -->
     <section class="gallery" id="gallery">
@@ -698,29 +897,38 @@
 </section>
 
     <!-- Контакты -->
-    <section class="contact" id="contact">
-        <h2 class="section-title">Свяжитесь со мной</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <p>Готовы обсудить ваш проект или задать вопросы? Я с радостью помогу вам и отвечу на все ваши вопросы.</p>
-                <ul>
-                    <li><i class="fas fa-phone"></i> +7 (123) 456-78-90</li>
-                    <li><i class="fas fa-envelope"></i> hello@elenaray.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Фотографическая, 15</li>
-                </ul>
+ <section class="contact" id="contact">
+    <h2 class="section-title">Свяжитесь со мной</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <p>Готовы обсудить ваш проект или задать вопросы? Я с радостью помогу вам и отвечу на все ваши вопросы.</p>
+            <ul>
+                <li><i class="fas fa-phone"></i> +7 (985) 291 39-36</li>
+                <li><i class="fas fa-envelope"></i> hello@elenaray.com</li>
+                <li>
+                    <a href="https://www.instagram.com/marishechka888?igsh=MWV3eXA2cncxN21zcg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>@Marina
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Кнопки соцсетей -->
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/marishechka888?igsh=MWV3eXA2cncxN21zcg%3D%3D&utm_source=qr" class="social-button instagram" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://web.telegram.org/a/#7305067542" class="social-button telegram" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-telegram"></i> Telegram
+</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Футер -->
     <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-behance"></i></a>
-            <a href="#"><i class="fab fa-500px"></i></a>
-        </div>
-        <p>&copy; Marina Ray Photography. Все права защищены.</p>
+        <p>&copy; Marina Romanova Photography. Все права защищены.</p>
     </footer>
 
     <script>
