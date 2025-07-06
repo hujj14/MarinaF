@@ -497,6 +497,81 @@
     flex: 1;
     /* остальные стили для карточек */
 }
+.services {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-card i {
+        font-size: 32px;
+    }
+    
+    .service-card h3 {
+        font-size: 18px;
+    }
+    
+    .service-card p {
+        font-size: 14px;
+    }
+}
     </style>
 </head>
 <body>
@@ -588,45 +663,40 @@
 <section class="services" id="services">
     <h2 class="section-title">Мои услуги</h2>
     <div class="services-container">
-        <!-- Первый ряд -->
-        <div class="service-row">
-            <div class="service-card">
-                <i class="fas fa-camera-retro"></i>
-                <h3>Женская / Мужская фотосессия</h3>
-                <p>Индивидуальные портреты, подчеркивающие вашу уникальность. Студийная или outdoor съемка с профессиональным светом.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-users"></i>
-                <h3>Семейная фотосессия</h3>
-                <p>Теплые семейные кадры с детьми любого возраста. Умею находить подход даже к самым скромным малышам.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-tshirt"></i>
-                <h3>Фэшн-съемка</h3>
-                <p>Создание стильных образов для брендов одежды, lookbook'ов и рекламных кампаний.</p>
-            </div>
+        <!-- Все карточки в одном контейнере без рядов -->
+        <div class="service-card">
+            <i class="fas fa-camera-retro"></i>
+            <h3>Женская / Мужская фотосессия</h3>
+            <p>Индивидуальные портреты, подчеркивающие вашу уникальность. Студийная или outdoor съемка с профессиональным светом.</p>
         </div>
-        
-        <!-- Второй ряд -->
-        <div class="service-row">
-            <div class="service-card">
-                <i class="fas fa-walking"></i>
-                <h3>Прогулка с фотографом</h3>
-                <p>Неформальная съемка в городской среде. Идеально для соцсетей, знакомств и просто красивых кадров "в движении".</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-briefcase"></i>
-                <h3>Корпоративная съемка</h3>
-                <p>Портреты сотрудников, репортаж с мероприятий, съемка для сайта компании и корпоративных медиа.</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-box-open"></i>
-                <h3>Предметная фотография</h3>
-                <p>Профессиональная съемка товаров для интернет-магазинов с идеальной цветопередачей и композицией.</p>
-            </div>
+        <div class="service-card">
+            <i class="fas fa-users"></i>
+            <h3>Семейная фотосессия</h3>
+            <p>Теплые семейные кадры с детьми любого возраста. Умею находить подход даже к самым скромным малышам.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-tshirt"></i>
+            <h3>Фэшн-съемка</h3>
+            <p>Создание стильных образов для брендов одежды, lookbook'ов и рекламных кампаний.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-walking"></i>
+            <h3>Прогулка с фотографом</h3>
+            <p>Неформальная съемка в городской среде. Идеально для соцсетей, знакомств и просто красивых кадров "в движении".</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Корпоративная съемка</h3>
+            <p>Портреты сотрудников, репортаж с мероприятий, съемка для сайта компании и корпоративных медиа.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-box-open"></i>
+            <h3>Предметная фотография</h3>
+            <p>Профессиональная съемка товаров для интернет-магазинов с идеальной цветопередачей и композицией.</p>
         </div>
     </div>
 </section>
+
     <!-- Контакты -->
     <section class="contact" id="contact">
         <h2 class="section-title">Свяжитесь со мной</h2>
