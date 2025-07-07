@@ -712,7 +712,7 @@
 
 .certificate-item img {
     width: 100%;
-    height: 250px;
+    height: 500px;
     object-fit: cover;
     border-bottom: 1px solid #eee;
 }
@@ -742,6 +742,51 @@
         height: 200px;
     }
 }
+.phone-number {
+    position: relative;
+    list-style: none;
+    padding-left: 30px;
+  }
+  
+  .phone-number i {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #ff6b6b;
+  }
+  
+  .call-on-hover {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .call-on-hover:hover {
+    color: #ff6b6b;
+    transform: translateX(5px);
+  }
+  
+  .call-on-hover::after {
+    content: "Позвонить";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 10px;
+    background: #ff6b6b;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .call-on-hover:hover::after {
+    opacity: 1;
+  }
+
     </style>
 </head>
 <body>
@@ -774,7 +819,7 @@
     <!-- Обо мне -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Фотограф">
+            <img src="Marina.png">
         </div>
         <div class="about-content">
             <h2 class="section-title">Обо мне</h2>
@@ -790,73 +835,125 @@
     <h2 class="section-title">Мои дипломы и заслуги</h2>
     <div class="certificates-container">
         <div class="certificate-item">
-            <img src="https://getfile.dokpub.com//i/voOzrLaZuzsDsA">
+            <img src="Marina.vvod.png">
             <div class="certificate-info">
-                <h3>Диплом профессионального фотографа</h3>
+                <h3>Диплом за завершение Ввод обучения </h3>
                 <p></p>
             </div>
         </div>
         
         <div class="certificate-item">
-            <img src="images/diploma2.jpg" alt="Сертификат по свету в фотографии">
+            <img src="Marina2step-1.png">
             <div class="certificate-info">
-                <h3>Сертификат по работе со светом</h3>
-                <p>Мастер-класс от известного fashion-фотографа Джеймса Родригеса, 2020 год. Углубленное изучение работы со студийным светом.</p>
+                <h3>Диплом за завершение обучения 2 ступени</h3>
+                <p></p>
             </div>
         </div>
         
         <div class="certificate-item">
-            <img src="images/diploma3.jpg" alt="Награда за лучшую фэшн-съемку">
+            <img src="Marina3step.html.png">
             <div class="certificate-info">
-                <h3>Награда "Лучшая фэшн-съемка"</h3>
-                <p>Премия Russian Fashion Photography Awards 2022 за серию работ для бренда "Elegance".</p>
+                <h3>Диплом за завершение обучения 3 ступени</h3>
+                <p></p>
             </div>
         </div>
+      <div class="full-width-certificate">
+    <div class="certificate-container">
+        <img src="MarinaDiplom.png" alt="Диплом за окончание обучения" class="diploma-image">
+        <div class="certificate-info">
+            <h3>Диплом за окончание обучения</h3>
+        </div>
+    </div>
+</div>
     </div>
 </section>
+<style>
+    .full-width-certificate {
+        width: 100%;
+        margin: 40px 0;
+        display: flex;
+        justify-content: center;
+        background-color: #f8f9fa;
+        padding: 30px 0;
+    }
+    
+    .certificate-container {
+        
+        max-width: 1200px;
+        width: 100%;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .diploma-image {
+        width: 100%;
+        height: auto;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+
+    }
+     .diploma-image:hover {
+        transform: scale(1.01);
+    }
+    
+    .certificate-info {
+        margin-top: 20px;
+    }
+    
+    .certificate-info h3 {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    </style>
+
 
     <!-- Галерея -->
     <section class="gallery" id="gallery">
         <h2 class="section-title">Мои работы</h2>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Портрет">
+                <img src="photo1.html.png">
                 <div class="overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Свадьба">
+                <img src="photo2.png">
                 <div class="overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=720&q=80" alt="Мода">
+                <img src="photo3.png">
                 <div class="overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Концерт">
+                <img src="photo4.png">
                 <div class="overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Пейзаж">
+                <img src="photo5.png">
                 <div class="overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Предметная">
+                <img src="photo6.png">
                 <div class="overlay">
                     <i class="fas fa-search-plus"></i>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Услуги -->
 <section class="services" id="services">
@@ -903,7 +1000,10 @@
         <div class="contact-info">
             <p>Готовы обсудить ваш проект или задать вопросы? Я с радостью помогу вам и отвечу на все ваши вопросы.</p>
             <ul>
-                <li><i class="fas fa-phone"></i> +7 (985) 291 39-36</li>
+                <li class="phone-number">
+  <i class="fas fa-phone"></i>
+  <a href="tel:+79852913936">+7 (985) 291-39-36</a>
+</li>
                 <li><i class="fas fa-envelope"></i> hello@elenaray.com</li>
                 <li>
                     <a href="https://www.instagram.com/marishechka888?igsh=MWV3eXA2cncxN21zcg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
